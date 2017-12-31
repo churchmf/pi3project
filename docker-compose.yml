@@ -6,10 +6,10 @@ services:
      - "1935:1935"
      container_name: nginx-rtmp
   camera-broadcast:
-    build: "../server/"
+    build: "../camera-broadcast/"
     container_name: camera-broadcast
   angular-app:
-    build: "../client/my-app"
+    build: "../angular-app/"
     ports:
     - "8080:80"
     container_name: angular-app
