@@ -2,7 +2,7 @@ version: '3'
 services:
   streaming-server:
     container_name: streaming-server
-    image: "datarhei/nginx-rtmp:1.13.5-dev-aarch64"
+    image: "datarhei/nginx-rtmp:1.13.5-dev-armhf"
     ports:
       - '1935:1935'
   #angular-app:
