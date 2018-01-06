@@ -1,15 +1,13 @@
 version: '3'
 services:
-  nginx-rtmp:
-    image: tiangolo/nginx-rtmp
+  streamer:
+    container_name: streamer
+    build: alfg/nginx-rtmp
     ports:
       - '1935:1935'
-    container_name: nginx-rtmp
-  camera-broadcast:
-    build: camera-broadcast/
-    container_name: camera-broadcast
+      - '8080:81'
   angular-app:
+    container_name: angular-app
     build: angular-app/
     ports:
       - '8080:80'
-    container_name: angular-app
