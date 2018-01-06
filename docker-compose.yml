@@ -2,7 +2,7 @@ version: '3'
 services:
   streamer:
     container_name: streamer
-    build: alfg/nginx-rtmp
+    image: "alfg/nginx-rtmp"
     ports:
       - '1935:1935'
       - '8080:81'
