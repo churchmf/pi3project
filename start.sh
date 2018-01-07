@@ -8,4 +8,5 @@
 docker-compose up -d
 
 # stream video to nginx
-raspivid -o - -t 0 -vf -hf -fps 10 -b 500000 | ffmpeg -loglevel error -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://localhost:1935/live/test &
+#raspivid -o - -t 0 -vf -hf -fps 10 -b 500000 | ffmpeg -loglevel warning -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://localhost:1935/live/test &
+raspivid -o - -t 0 | ffmpeg -loglevel warning -re -f h264 -i - -vcodec copy -f flv rtmp://localhost:1935/live/test &
