@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  stream = {
+    source: 'http://192.168.0.108:81/dash/test.mpd',
+  };
 }
