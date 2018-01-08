@@ -1,8 +1,8 @@
 #!/bin/sh
 # build angular app
-#npm install -g @angular/cli
-#npm install --prefix ./angular-app/my-app
-#ng build ./angular-app/my-app --prod
+npm install -g @angular/cli
+npm install --prefix ./angular-app/my-app
+ng build ./angular-app/my-app --prod
 
 # bring up nginx and angular app
 docker-compose build
