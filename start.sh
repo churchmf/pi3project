@@ -5,6 +5,7 @@
 #ng build ./angular-app/my-app --prod
 
 # bring up nginx and angular app
+docker-compose build
 docker-compose up -d
 
 # stream video to nginx
