@@ -5,6 +5,7 @@
 #ng build ./angular-app/my-app --prod
 
 # bring up our streaming server and angular app
+docker-compose down
 docker-compose build
 docker-compose up -d
 
