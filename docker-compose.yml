@@ -11,3 +11,8 @@ services:
     build: angular-app/
     ports:
       - '80:80'
+  roboarm-server:
+    container_name: roboarm-server
+    build: roboarm-server/
+    ports:
+      - '5000:5000'
