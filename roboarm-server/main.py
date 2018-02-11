@@ -51,7 +51,7 @@ def rotate_clock(timeout):
 
 @app.route('/base/rotate_counter/<int:timeout>')
 def rotate_counter(timeout):
-    arm.base.rotate_clock(timeout=timeout)
+    arm.base.rotate_counter(timeout=timeout)
     return 'OK'
 
 @app.route('/led/on/<int:timeout>')
