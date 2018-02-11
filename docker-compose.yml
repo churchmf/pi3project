@@ -12,7 +12,10 @@ services:
     ports:
       - '80:80'
   roboarm-server:
+    privileged: true
     container_name: roboarm-server
     build: roboarm-server/
     ports:
       - '5000:5000'
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
