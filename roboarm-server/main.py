@@ -1,8 +1,12 @@
 from roboarm import Arm
 from flask import Flask
 
+import usb.core, usb.util, time
+
+test = usb.core.find(idVendor=0x1267, idProduct=0x001)
+
 app = Flask(__name__)
-arm = Arm()
+arm = Arm(idVendor=0x1267, idProduct=0x001)
 
 @app.route('/elbow/up/<int:timeout>')
 def elbow_up(timeout):
